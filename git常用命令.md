@@ -12,18 +12,21 @@
 ## 子模块
 
 * **创建子模块:** `git submodule add <submodule_url>`
-* **获取子模块:** 
+* **获取子模块:**
   * 方式一:`git clone <module_url> --recurse-submodules`(递归拉取项目中子模块的代码)
   * 方式二:
-           ```
-            git submodule init
-            git submodule update
-           ```
+
+      ```shell
+         git submodule init
+         git submodule update
+      ```
+
 * **子模块发生变动:**
   1. 子模块文件夹的内容发生变动，还没有提交到远程。
   2. 子模块文件夹的内容已经和远程同步，但是主项目还没有提交。
   3. 远程子模块内容发生变动，还没有拉取到本地。
-     ```
+
+     ```shell
         cd 子模块文件夹
         git pull origin master
      ```
