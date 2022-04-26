@@ -16,12 +16,13 @@
   
 ## 子模块
 
-* **创建子模块:** `git submodule add <submodule_url>`
+* **创建子模块:** `git submodule add <submodule_url> 本地路径`
 * **获取子模块:**
   * 方式一:`git clone <module_url> --recurse-submodules`(递归拉取项目中子模块的代码)
   * 方式二:
 
       ```shell
+         git submodule
          git submodule init
          git submodule update
       ```
@@ -33,5 +34,10 @@
 
      ```shell
         cd 子模块文件夹
+        git checkout master
         git pull origin master
+        # 如果是拉取不同项目下的同一子模块，则需要下面几步
+        cd 主模块文件夹
+        git add .
+        git commit -m "update submodule"
      ```
