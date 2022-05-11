@@ -41,3 +41,18 @@
         git add .
         git commit -m "update submodule"
      ```
+
+## 比较本地仓库和远程仓库的差异
+
+1. 本地与远程的差集
+
+```shell
+git log master..origin/master
+```
+
+2. 统计文件的改动
+
+```shell
+# git diff <local branch> <remote>/<remote branch>
+git diff --stat master origin/master
+```
