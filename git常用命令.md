@@ -13,6 +13,7 @@
 * **将指定分支提交到远程某一分支上:** `git push master:dev`(将本地master分支的内容提交到远程主机的dev分支上，如果远程主机没有dev分支，那么会自动创建)
 * **远程分支同步到本地分支** `git checkout --track origin/branch_name`(本地新建branch_name分支，并自动跟踪远程同名分支)
 * **本地分支同步到远程分支** `git push --set-upstream origin branch_name`(远程新建branch_name分支，并与本地分支同步)
+* **本地分支关联到远程分支** `git branch --set-upstream-to=origin/signature signature`(将本地已有分支signature和远程已有分支signature关联起来)
   
 ## 子模块
 
